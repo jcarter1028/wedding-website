@@ -5,7 +5,19 @@ import { motion } from "framer-motion";
 import Title from "../Title";
 import Text from "../Text";
 
-const weekend = [
+interface WeekendItem {
+  title: string;
+  description: string;
+  extra?: string;
+  list?: string[];
+}
+
+interface WeekendDay {
+  day: string;
+  items: WeekendItem[];
+}
+
+const weekend: WeekendDay[] = [
   {
     day: "Friday",
     items: [
