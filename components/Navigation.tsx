@@ -9,13 +9,10 @@ import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Details", href: "/details" },
-  { label: "Timeline", href: "/timeline" },
-  { label: "Registry", href: "/registry" },
+  { label: "Accommodation", href: "/accommodation" },
   { label: "Travel", href: "/travel" },
-  { label: "Wedding Party", href: "/party" },
-  { label: "For Our Guests", href: "/guests" },
-  { label: "FAQ", href: "/faq" },
+  { label: "Timeline", href: "/timeline" },
+  { label: "Activities", href: "/activities" },
   { label: "RSVP", href: "/rsvp" },
 ];
 
@@ -23,7 +20,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  
+
   // Always show solid background on non-home pages
   const isHomePage = pathname === "/";
 
@@ -71,8 +68,8 @@ export default function Navigation() {
                     pathname === item.href
                       ? "text-sage-600"
                       : showSolidNav
-                      ? "text-gray-700"
-                      : "text-white"
+                        ? "text-gray-700"
+                        : "text-white"
                   }`}
                 >
                   {item.label}

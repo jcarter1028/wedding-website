@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <Navigation />
-      
+
       <div id="home">
         <Hero />
       </div>
@@ -54,7 +54,7 @@ export default function Home() {
       <footer className="bg-gradient-to-b from-white to-rose-100 py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="font-script text-4xl text-rose-900 mb-4">
-            James & Summer
+            Juliette & Uaine
           </p>
           <p className="text-gray-600 mb-2">
             September 15th, 2025 • San Francisco, California
@@ -67,4 +67,3 @@ export default function Home() {
     </main>
   );
 }
-

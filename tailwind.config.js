@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['Playfair Display', 'serif'],
-        body: ['Playfair Display', 'serif'],
-        script: ['Luxurious Script', 'cursive'],
+        sans: ['var(--font-jakarta)', 'sans-serif'],
+        heading: ['var(--font-jakarta)', 'sans-serif'],
+        body: ['var(--font-jakarta)', 'sans-serif'],
       },
       colors: {
         cream: {

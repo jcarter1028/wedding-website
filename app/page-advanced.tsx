@@ -25,7 +25,7 @@ export default function PageAdvanced() {
       {/* Fixed Image Section - Like Example #1 */}
       <FixedImageSection
         imageUrl="/images/couple-1.jpg"
-        imageAlt="James and Summer"
+        imageAlt="Juliette and Uaine"
         title="Our Story"
         subtitle="How it all began"
         description="We met on a sunny day in Central Park, both reaching for the last croissant at a coffee cart. Instead of fighting over it, we decided to share it... and the rest is history."
@@ -56,9 +56,10 @@ export default function PageAdvanced() {
                     The Proposal 💍
                   </h3>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Michael proposed during a sunset hike at our favorite mountain trail, 
-                    with champagne hidden in his backpack and our song playing from a 
-                    portable speaker. It was the most magical moment of our lives.
+                    Michael proposed during a sunset hike at our favorite
+                    mountain trail, with champagne hidden in his backpack and
+                    our song playing from a portable speaker. It was the most
+                    magical moment of our lives.
                   </p>
                 </div>
               </FadeIn>
@@ -79,9 +80,9 @@ export default function PageAdvanced() {
                     How We Met ❤️
                   </h3>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    We met on a sunny day in Central Park, both reaching for the last 
-                    croissant at a coffee cart. Instead of fighting over it, we decided 
-                    to share it... and the rest is history.
+                    We met on a sunny day in Central Park, both reaching for the
+                    last croissant at a coffee cart. Instead of fighting over
+                    it, we decided to share it... and the rest is history.
                   </p>
                 </div>
               </FadeIn>
@@ -147,7 +148,7 @@ export default function PageAdvanced() {
       <footer className="bg-gradient-to-b from-white to-rose-100 py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="font-script text-4xl text-rose-900 mb-4">
-            James & Summer
+            Juliette & Uaine
           </p>
           <p className="text-gray-600 mb-2">
             September 15th, 2025 • San Francisco, California
@@ -160,4 +161,3 @@ export default function PageAdvanced() {
     </main>
   );
 }
-

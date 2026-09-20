@@ -17,11 +17,11 @@ export default function Hero() {
         className="absolute inset-0"
       >
         {/* Hero Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover"
           style={{
-            backgroundImage: "url('/images/hero.jpg?v=1')",
-            backgroundPosition: '55% center',
+            backgroundImage: "url('/images/uandj3.jpg')",
+            backgroundPosition: "55% center",
           }}
         />
         {/* Overlay for text readability */}
@@ -60,14 +60,24 @@ export default function Hero() {
           >
             {weddingDate.displayDate}
           </motion.p>
-          
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.6 }}
             className="text-base sm:text-lg md:text-xl text-white/90 tracking-wide drop-shadow-lg mb-16 sm:mb-20"
           >
-            Port Sanilac, Michigan
+            {weddingData.weddingLocation.location}
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.6 }}
+            className="text-center text-base sm:text-lg md:text-xl text-white/90 tracking-wide drop-shadow-lg mb-16 sm:mb-20 max-w-lg mx-auto font-semibold"
+          >
+            Welcome to our wedding website! We’re so excited to celebrate with
+            you in the Austrian mountains!
           </motion.p>
         </motion.div>
 
@@ -85,7 +95,7 @@ export default function Hero() {
               // Scroll to the countdown section, accounting for fixed header height (approx 80px)
               window.scrollTo({
                 top: window.innerHeight - 80,
-                behavior: 'smooth'
+                behavior: "smooth",
               });
             }}
             animate={{ y: [0, 10, 0] }}
@@ -114,4 +124,3 @@ export default function Hero() {
     </section>
   );
 }
-

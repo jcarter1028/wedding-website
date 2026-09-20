@@ -12,66 +12,78 @@ const previewSections = [
   {
     title: "Our Story",
     subtitle: "How it all began",
-    description: "From the moment we met to our magical engagement, discover the journey that brought us here.",
+    description:
+      "From the moment we met to our magical engagement, discover the journey that brought us here.",
     href: "/story",
-    image: "https://images.unsplash.com/photo-1529634806980-85c3dd6d2627?w=1920&q=80",
+    image:
+      "https://images.unsplash.com/photo-1529634806980-85c3dd6d2627?w=1920&q=80",
     delay: 0.2,
   },
   {
     title: "Event Details",
     subtitle: "Ceremony & Reception",
-    description: "Join us for our ceremony, cocktail hour, and reception. Find venue details and what to expect.",
+    description:
+      "Join us for our ceremony, cocktail hour, and reception. Find venue details and what to expect.",
     href: "/details",
-    image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&q=80",
+    image:
+      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&q=80",
     delay: 0.3,
   },
   {
     title: "Timeline",
     subtitle: "Day of Schedule",
-    description: "See the full schedule of events from ceremony to send-off. Plan your day with us.",
+    description:
+      "See the full schedule of events from ceremony to send-off. Plan your day with us.",
     href: "/timeline",
-    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1920&q=80",
+    image:
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1920&q=80",
     delay: 0.4,
   },
   {
     title: "Registry",
     subtitle: "Gift Registry",
-    description: "Your presence is the greatest gift, but if you wish to honor us with something special.",
+    description:
+      "Your presence is the greatest gift, but if you wish to honor us with something special.",
     href: "/registry",
-    image: "https://images.unsplash.com/photo-1513279922550-d8ee8cc18288?w=1920&q=80",
+    image:
+      "https://images.unsplash.com/photo-1513279922550-d8ee8cc18288?w=1920&q=80",
     delay: 0.5,
   },
   {
     title: "Travel & Stay",
     subtitle: "Accommodations",
-    description: "Hotels, airports, parking, and shuttle information to help you plan your visit.",
+    description:
+      "Hotels, airports, parking, and shuttle information to help you plan your visit.",
     href: "/travel",
-    image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1920&q=80",
+    image:
+      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1920&q=80",
     delay: 0.6,
   },
   {
     title: "Wedding Party",
     subtitle: "Our Loved Ones",
-    description: "Meet the special people standing by our side on this incredible day.",
+    description:
+      "Meet the special people standing by our side on this incredible day.",
     href: "/party",
-    image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1920&q=80",
+    image:
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1920&q=80",
     delay: 0.7,
   },
 ];
 
 // Large immersive photo section component
-function ImmersivePhotoSection({ 
-  image, 
-  title, 
-  subtitle, 
-  description, 
+function ImmersivePhotoSection({
+  image,
+  title,
+  subtitle,
+  description,
   href,
-  reverse = false 
-}: { 
-  image: string; 
-  title: string; 
+  reverse = false,
+}: {
+  image: string;
+  title: string;
   subtitle: string;
-  description: string; 
+  description: string;
   href: string;
   reverse?: boolean;
 }) {
@@ -85,7 +97,7 @@ function ImmersivePhotoSection({
         viewport={{ once: true }}
         className="absolute inset-0"
       >
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${image}')` }}
         />
@@ -109,7 +121,7 @@ function ImmersivePhotoSection({
         >
           {subtitle}
         </motion.p>
-        
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -142,13 +154,13 @@ function ImmersivePhotoSection({
           >
             <span className="flex items-center gap-2">
               Learn More
-              <svg 
-                className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" 
-                fill="none" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth="2" 
-                viewBox="0 0 24 24" 
+              <svg
+                className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
@@ -165,46 +177,27 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <Navigation />
-      
+
       {/* Hero Section */}
       <Hero />
 
-      {/* Cascading Beach Background Section - All content on Port Sanilac Beach */}
+      {/* Mountain background section- All content on PM */}
       <div className="relative">
         {/* Fixed Beach Background */}
-        <div 
+        <div
           className="fixed inset-0 top-0 w-full h-full -z-10"
-          style={{ 
-            backgroundImage: "url('/images/field.jpg')",
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: '60% center' // Halfway between center and right
+          style={{
+            backgroundImage: "url('/images/mountain3.jpeg')",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "60% center", // Halfway between center and right
           }}
         />
-
-        {/* Countdown Section */}
-        <section className="relative py-10 sm:py-12 border-t-2 border-sage-200/50">
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="relative z-10 max-w-4xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <p className="text-sage-200 text-xs sm:text-sm md:text-base tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
-                Counting down to our special day
-              </p>
-              <Countdown targetDate={weddingData.weddingDate.date} />
-            </motion.div>
-          </div>
-        </section>
 
         {/* Horizontal Divider */}
         <div className="h-px bg-gradient-to-r from-transparent via-sage-300/40 to-transparent" />
 
-        {/* Event Details Section */}
+        {/* Accommodation Section */}
         <section className="relative py-12 sm:py-16">
           <div className="absolute inset-0 bg-black/40" />
           <motion.div
@@ -217,19 +210,31 @@ export default function Home() {
             <p className="text-sage-200 text-xs sm:text-sm md:text-base tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-4">
               The Celebration
             </p>
-            <h2 className="font-script text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-4 sm:mb-6 drop-shadow-2xl">
-              Event Details
+            <h2 className="font-script text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 sm:mb-6 drop-shadow-2xl">
+              Where is it
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-              Join us for an enchanting day filled with love, laughter, and memories.
+              The celebration will take place over a weekend at Haus Matschwitz,
+              in the Montafon Valley in Austria. It’s a chalet up in the
+              mountains where we’ll all be staying, accessible directly by
+              gondola or on foot. Please check the accommodation details on this
+              page for more information.
             </p>
             <Link
-              href="/details"
+              href="/accommodation"
               className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md border-2 border-sage-200/70 text-white rounded-full hover:bg-sage-100 hover:text-sage-800 transition-all duration-300 font-medium text-base sm:text-lg group"
             >
               <span className="flex items-center gap-2">
                 Learn More
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
                   <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                 </svg>
               </span>
@@ -240,7 +245,7 @@ export default function Home() {
         {/* Horizontal Divider */}
         <div className="h-px bg-gradient-to-r from-transparent via-sage-300/40 to-transparent" />
 
-        {/* Wedding Party Section */}
+        {/* Travel Section */}
         <section className="relative py-12 sm:py-16">
           <div className="absolute inset-0 bg-black/40" />
           <motion.div
@@ -251,49 +256,16 @@ export default function Home() {
             className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto"
           >
             <p className="text-sage-200 text-xs sm:text-sm md:text-base tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-4">
-              Our Circle
+              Travel
             </p>
             <h2 className="font-script text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-4 sm:mb-6 drop-shadow-2xl">
-              Wedding Party
+              Getting there
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-              Meet the incredible friends and family who have supported us, stood by us, and will be standing with us on our special day.
-            </p>
-            <Link
-              href="/party"
-              className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md border-2 border-sage-200/70 text-white rounded-full hover:bg-sage-100 hover:text-sage-800 transition-all duration-300 font-medium text-base sm:text-lg group"
-            >
-              <span className="flex items-center gap-2">
-                Learn More
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                </svg>
-              </span>
-            </Link>
-          </motion.div>
-        </section>
-
-        {/* Horizontal Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-sage-300/40 to-transparent" />
-
-        {/* Travel & Stay Section */}
-        <section className="relative py-12 sm:py-16">
-          <div className="absolute inset-0 bg-black/40" />
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto"
-          >
-            <p className="text-sage-200 text-xs sm:text-sm md:text-base tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-4">
-              Plan Your Visit
-            </p>
-            <h2 className="font-script text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-4 sm:mb-6 drop-shadow-2xl">
-              Travel & Stay
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-              Check out local hotels and accommodations in the area.
+              To get to the gondola that will take you up the mountain, make
+              your way to the Golmerbahn car park near Vandans. Refer to the
+              transport options page for details on getting there by plane,
+              train or car.
             </p>
             <Link
               href="/travel"
@@ -301,7 +273,15 @@ export default function Home() {
             >
               <span className="flex items-center gap-2">
                 Learn More
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
                   <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                 </svg>
               </span>
@@ -312,7 +292,101 @@ export default function Home() {
         {/* Horizontal Divider */}
         <div className="h-px bg-gradient-to-r from-transparent via-sage-300/40 to-transparent" />
 
-        {/* Final CTA Section */}
+        {/* Timeline */}
+        <section className="relative py-12 sm:py-16">
+          <div className="absolute inset-0 bg-black/40" />
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto"
+          >
+            <p className="text-sage-200 text-xs sm:text-sm md:text-base tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-4">
+              What will the day look like?
+            </p>
+            <h2 className="font-script text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-4 sm:mb-6 drop-shadow-2xl">
+              Weekend Timeline
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
+              We’re still refining the details, but we’ll be updating the
+              timeline page in due course.
+            </p>
+            <Link
+              href="/timeline"
+              className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md border-2 border-sage-200/70 text-white rounded-full hover:bg-sage-100 hover:text-sage-800 transition-all duration-300 font-medium text-base sm:text-lg group"
+            >
+              <span className="flex items-center gap-2">
+                Learn More
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </span>
+            </Link>
+          </motion.div>
+        </section>
+
+        {/* Horizontal Divider */}
+        <div className="h-px bg-gradient-to-r from-transparent via-sage-300/40 to-transparent" />
+
+        {/* What else is there to do */}
+        <section className="relative py-12 sm:py-16">
+          <div className="absolute inset-0 bg-black/40" />
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto"
+          >
+            <p className="text-sage-200 text-xs sm:text-sm md:text-base tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-4">
+              What else can I do there?
+            </p>
+            <h2 className="font-script text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-4 sm:mb-6 drop-shadow-2xl">
+              Activities
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
+              If you have time, we highly recommend spending a few extra days in
+              the area. The mountains are truly an outdoor paradise, with
+              countless activities to enjoy. But if they are not your things,
+              this area is also has beautiful rivers, lakes and historical
+              towns. We’ve put together a small list of suggestions to help you
+              plan your stay.{" "}
+            </p>
+            <Link
+              href="/activities"
+              className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md border-2 border-sage-200/70 text-white rounded-full hover:bg-sage-100 hover:text-sage-800 transition-all duration-300 font-medium text-base sm:text-lg group"
+            >
+              <span className="flex items-center gap-2">
+                Learn More
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </span>
+            </Link>
+          </motion.div>
+        </section>
+
+        {/* Horizontal Divider */}
+        <div className="h-px bg-gradient-to-r from-transparent via-sage-300/40 to-transparent" />
+
+        {/* RSVP */}
         <section className="relative py-14 sm:py-20">
           <div className="absolute inset-0 bg-black/50" />
           <motion.div
@@ -323,8 +397,14 @@ export default function Home() {
             className="relative z-10 text-center px-4 sm:px-6"
           >
             <h2 className="font-script text-4xl sm:text-5xl md:text-7xl text-white mb-6 sm:mb-8 drop-shadow-2xl">
-              Can't Wait to See You
+              What next ?
             </h2>
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
+              Although it may seem early, we’d ask you to check the details and
+              logistics, then let us know on the RSVP page whether you’ll be
+              joining us by… This will help us organise accommodation options
+              for everyone up the mountain.
+            </p>
             <Link
               href="/rsvp"
               className="inline-block px-8 sm:px-12 py-4 sm:py-5 bg-sage-500 text-white rounded-full hover:bg-sage-600 transition-all duration-300 font-bold text-lg sm:text-xl shadow-2xl hover:shadow-sage-400/50 hover:scale-105"
@@ -342,13 +422,14 @@ export default function Home() {
             {weddingData.couple.coupleNames}
           </p>
           <p className="text-gray-600 mb-3 text-sm sm:text-base">
-            {weddingData.weddingDate.displayDate} • Port Sanilac, Michigan
+            {weddingData.weddingDate.displayDate} •{" "}
+            {weddingData.weddingLocation.location}
           </p>
         </div>
         {/* Copyright in bottom left */}
         <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4">
           <p className="text-sand-300 text-xs">
-            © 2026 James Falk. All rights reserved.
+            © 2026 Juliette Carter. All rights reserved.
           </p>
         </div>
       </footer>
