@@ -9,6 +9,7 @@ import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "/" },
+  { label: "Accommodation", href: "/accommodation" },
   { label: "Details", href: "/details" },
   { label: "Timeline", href: "/timeline" },
   { label: "Registry", href: "/registry" },
@@ -23,7 +24,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  
+
   // Always show solid background on non-home pages
   const isHomePage = pathname === "/";
 
@@ -71,8 +72,8 @@ export default function Navigation() {
                     pathname === item.href
                       ? "text-sage-600"
                       : showSolidNav
-                      ? "text-gray-700"
-                      : "text-white"
+                        ? "text-gray-700"
+                        : "text-white"
                   }`}
                 >
                   {item.label}

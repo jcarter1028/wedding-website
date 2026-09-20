@@ -12,66 +12,78 @@ const previewSections = [
   {
     title: "Our Story",
     subtitle: "How it all began",
-    description: "From the moment we met to our magical engagement, discover the journey that brought us here.",
+    description:
+      "From the moment we met to our magical engagement, discover the journey that brought us here.",
     href: "/story",
-    image: "https://images.unsplash.com/photo-1529634806980-85c3dd6d2627?w=1920&q=80",
+    image:
+      "https://images.unsplash.com/photo-1529634806980-85c3dd6d2627?w=1920&q=80",
     delay: 0.2,
   },
   {
     title: "Event Details",
     subtitle: "Ceremony & Reception",
-    description: "Join us for our ceremony, cocktail hour, and reception. Find venue details and what to expect.",
+    description:
+      "Join us for our ceremony, cocktail hour, and reception. Find venue details and what to expect.",
     href: "/details",
-    image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&q=80",
+    image:
+      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&q=80",
     delay: 0.3,
   },
   {
     title: "Timeline",
     subtitle: "Day of Schedule",
-    description: "See the full schedule of events from ceremony to send-off. Plan your day with us.",
+    description:
+      "See the full schedule of events from ceremony to send-off. Plan your day with us.",
     href: "/timeline",
-    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1920&q=80",
+    image:
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1920&q=80",
     delay: 0.4,
   },
   {
     title: "Registry",
     subtitle: "Gift Registry",
-    description: "Your presence is the greatest gift, but if you wish to honor us with something special.",
+    description:
+      "Your presence is the greatest gift, but if you wish to honor us with something special.",
     href: "/registry",
-    image: "https://images.unsplash.com/photo-1513279922550-d8ee8cc18288?w=1920&q=80",
+    image:
+      "https://images.unsplash.com/photo-1513279922550-d8ee8cc18288?w=1920&q=80",
     delay: 0.5,
   },
   {
     title: "Travel & Stay",
     subtitle: "Accommodations",
-    description: "Hotels, airports, parking, and shuttle information to help you plan your visit.",
+    description:
+      "Hotels, airports, parking, and shuttle information to help you plan your visit.",
     href: "/travel",
-    image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1920&q=80",
+    image:
+      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1920&q=80",
     delay: 0.6,
   },
   {
     title: "Wedding Party",
     subtitle: "Our Loved Ones",
-    description: "Meet the special people standing by our side on this incredible day.",
+    description:
+      "Meet the special people standing by our side on this incredible day.",
     href: "/party",
-    image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1920&q=80",
+    image:
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1920&q=80",
     delay: 0.7,
   },
 ];
 
 // Large immersive photo section component
-function ImmersivePhotoSection({ 
-  image, 
-  title, 
-  subtitle, 
-  description, 
+function ImmersivePhotoSection({
+  image,
+  title,
+  subtitle,
+  description,
   href,
-  reverse = false 
-}: { 
-  image: string; 
-  title: string; 
+  reverse = false,
+}: {
+  image: string;
+  title: string;
   subtitle: string;
-  description: string; 
+  description: string;
   href: string;
   reverse?: boolean;
 }) {
@@ -85,7 +97,7 @@ function ImmersivePhotoSection({
         viewport={{ once: true }}
         className="absolute inset-0"
       >
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${image}')` }}
         />
@@ -109,7 +121,7 @@ function ImmersivePhotoSection({
         >
           {subtitle}
         </motion.p>
-        
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -142,13 +154,13 @@ function ImmersivePhotoSection({
           >
             <span className="flex items-center gap-2">
               Learn More
-              <svg 
-                className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" 
-                fill="none" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth="2" 
-                viewBox="0 0 24 24" 
+              <svg
+                className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
@@ -165,20 +177,20 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <Navigation />
-      
+
       {/* Hero Section */}
       <Hero />
 
       {/* Cascading Beach Background Section - All content on Port Sanilac Beach */}
       <div className="relative">
         {/* Fixed Beach Background */}
-        <div 
+        <div
           className="fixed inset-0 top-0 w-full h-full -z-10"
-          style={{ 
+          style={{
             backgroundImage: "url('/images/field.jpg')",
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: '60% center' // Halfway between center and right
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "60% center", // Halfway between center and right
           }}
         />
 
@@ -221,7 +233,8 @@ export default function Home() {
               Event Details
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-              Join us for an enchanting day filled with love, laughter, and memories.
+              Join us for an enchanting day filled with love, laughter, and
+              memories.
             </p>
             <Link
               href="/details"
@@ -229,7 +242,15 @@ export default function Home() {
             >
               <span className="flex items-center gap-2">
                 Learn More
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
                   <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                 </svg>
               </span>
@@ -257,7 +278,8 @@ export default function Home() {
               Wedding Party
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-              Meet the incredible friends and family who have supported us, stood by us, and will be standing with us on our special day.
+              Meet the incredible friends and family who have supported us,
+              stood by us, and will be standing with us on our special day.
             </p>
             <Link
               href="/party"
@@ -265,7 +287,15 @@ export default function Home() {
             >
               <span className="flex items-center gap-2">
                 Learn More
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
                   <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                 </svg>
               </span>
@@ -301,7 +331,15 @@ export default function Home() {
             >
               <span className="flex items-center gap-2">
                 Learn More
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
                   <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                 </svg>
               </span>
@@ -342,13 +380,14 @@ export default function Home() {
             {weddingData.couple.coupleNames}
           </p>
           <p className="text-gray-600 mb-3 text-sm sm:text-base">
-            {weddingData.weddingDate.displayDate} • Port Sanilac, Michigan
+            {weddingData.weddingDate.displayDate} •{" "}
+            {weddingData.weddingLocation.location}
           </p>
         </div>
         {/* Copyright in bottom left */}
         <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4">
           <p className="text-sand-300 text-xs">
-            © 2026 James Falk. All rights reserved.
+            © 2026 Juliette Carter. All rights reserved.
           </p>
         </div>
       </footer>

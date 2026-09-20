@@ -17,23 +17,28 @@ export const weddingData = {
       lastName: "Johnson",
       fullName: "James Johnson",
     },
-    coupleNames: "James & Summer",
-    hashtag: "#JamesAndSummer2025",
+    coupleNames: "Juliette & Uaine",
   },
 
   // ===== OUR STORY =====
   story: {
     title: "Our Story",
-    howWeMet: "We met on a sunny day in Central Park, both reaching for the last croissant at a coffee cart. Instead of fighting over it, we decided to share it... and the rest is history.",
-    engagement: "Michael proposed during a sunset hike at our favorite mountain trail, with champagne hidden in his backpack and our song playing from a portable speaker.",
-    quote: "In you, I've found the love of my life and my closest, truest friend.",
+    howWeMet:
+      "We met on a sunny day in Central Park, both reaching for the last croissant at a coffee cart. Instead of fighting over it, we decided to share it... and the rest is history.",
+    engagement:
+      "Michael proposed during a sunset hike at our favorite mountain trail, with champagne hidden in his backpack and our song playing from a portable speaker.",
+    quote:
+      "In you, I've found the love of my life and my closest, truest friend.",
   },
 
   // ===== WEDDING DATE & COUNTDOWN =====
   weddingDate: {
-    date: "2026-06-20", // YYYY-MM-DD format
-    displayDate: "June 20th, 2026",
+    date: "2027-06-03", // YYYY-MM-DD format
+    displayDate: "02 July 2027 - 04 July 2027",
     dayOfWeek: "Saturday",
+  },
+  weddingLocation: {
+    location: "Haus Matschwitz",
   },
 
   // ===== EVENT DETAILS =====
@@ -79,23 +84,62 @@ export const weddingData = {
   // ===== DRESS CODE =====
   dressCode: {
     code: "Formal / Black Tie Optional",
-    description: "We kindly request formal attire. Ladies, feel free to wear long or cocktail dresses. Gentlemen, suits or tuxedos are preferred.",
+    description:
+      "We kindly request formal attire. Ladies, feel free to wear long or cocktail dresses. Gentlemen, suits or tuxedos are preferred.",
     colorsToAvoid: ["white", "ivory", "champagne"],
     note: "Please avoid white, ivory, or champagne tones.",
-    outdoorNote: "The ceremony will be outdoors on grass - heel stoppers recommended!",
+    outdoorNote:
+      "The ceremony will be outdoors on grass - heel stoppers recommended!",
   },
 
   // ===== TIMELINE =====
   timeline: [
-    { time: "3:00 PM", event: "Guests Arrive", description: "Welcome drinks served" },
-    { time: "3:30 PM", event: "The Entrance", description: "The bride make their entrance" },
-    { time: "4:45 PM", event: "Cocktail Hour", description: "Drinks with loved ones while the wedding party takes some pictures" },
-    { time: "5:00 PM", event: "Speeches", description: "A fun tradition with family" },
-    { time: "5:30 PM", event: "Dinner is Served", description: "Buffet and main courses open" },
-    { time: "6:30 PM", event: "First Dance & Family Dances", description: "The couple's first dance" },
-    { time: "8:00 PM", event: "Cake Cutting", description: "Ceremonial cake cutting" },
-    { time: "9:00 PM", event: "Bouquet Toss", description: "Fun tradition for the singles" },
-    { time: "10:00 PM", event: "After Party!", description: "Less formal, just dancing & having fun!" },
+    {
+      time: "3:00 PM",
+      event: "Guests Arrive",
+      description: "Welcome drinks served",
+    },
+    {
+      time: "3:30 PM",
+      event: "The Entrance",
+      description: "The bride make their entrance",
+    },
+    {
+      time: "4:45 PM",
+      event: "Cocktail Hour",
+      description:
+        "Drinks with loved ones while the wedding party takes some pictures",
+    },
+    {
+      time: "5:00 PM",
+      event: "Speeches",
+      description: "A fun tradition with family",
+    },
+    {
+      time: "5:30 PM",
+      event: "Dinner is Served",
+      description: "Buffet and main courses open",
+    },
+    {
+      time: "6:30 PM",
+      event: "First Dance & Family Dances",
+      description: "The couple's first dance",
+    },
+    {
+      time: "8:00 PM",
+      event: "Cake Cutting",
+      description: "Ceremonial cake cutting",
+    },
+    {
+      time: "9:00 PM",
+      event: "Bouquet Toss",
+      description: "Fun tradition for the singles",
+    },
+    {
+      time: "10:00 PM",
+      event: "After Party!",
+      description: "Less formal, just dancing & having fun!",
+    },
   ],
 
   // ===== REGISTRY =====
@@ -160,7 +204,8 @@ export const weddingData = {
     },
     shuttle: {
       provided: true,
-      details: "Complimentary shuttle service from The Grand Hotel to venue at 3:30 PM and return trips at 10:00 PM and 11:00 PM.",
+      details:
+        "Complimentary shuttle service from The Grand Hotel to venue at 3:30 PM and return trips at 10:00 PM and 11:00 PM.",
     },
   },
 
@@ -266,11 +311,13 @@ export const weddingData = {
   faq: [
     {
       question: "Can I bring a plus-one?",
-      answer: "If you did not receive a plus-one on your invitation, please do not bring a guest. If a plus-one was included for you, their name will be on your invitation.",
+      answer:
+        "If you did not receive a plus-one on your invitation, please do not bring a guest. If a plus-one was included for you, their name will be on your invitation.",
     },
     {
       question: "Are children welcome?",
-      answer: "We love your little ones, but we've decided to make this an adults-only celebration. We hope this allows you to have a night to relax and enjoy!",
+      answer:
+        "We love your little ones, but we've decided to make this an adults-only celebration. We hope this allows you to have a night to relax and enjoy!",
     },
     {
       question: "Is there parking available?",
@@ -282,19 +329,23 @@ export const weddingData = {
     },
     {
       question: "What's the weather typically like in June?",
-      answer: "Port Sanilac in June is usually pleasant with temperatures around 70-75°F. We recommend bringing a light jacket for the evening as it can get cooler by the lake.",
+      answer:
+        "Port Sanilac in June is usually pleasant with temperatures around 70-75°F. We recommend bringing a light jacket for the evening as it can get cooler by the lake.",
     },
     {
       question: "Is the venue wheelchair accessible?",
-      answer: "Yes, the venue is fully wheelchair accessible with accessible parking, ramps, and restrooms.",
+      answer:
+        "Yes, the venue is fully wheelchair accessible with accessible parking, ramps, and restrooms.",
     },
     {
       question: "What if I have dietary restrictions?",
-      answer: "Please let us know about any dietary restrictions or allergies when you RSVP. We'll work with our caterer to accommodate all guests.",
+      answer:
+        "Please let us know about any dietary restrictions or allergies when you RSVP. We'll work with our caterer to accommodate all guests.",
     },
     {
       question: "What time should I arrive?",
-      answer: "Please arrive by 3:00 PM to allow time for parking and seating before the ceremony begins.",
+      answer:
+        "Please arrive by 3:00 PM to allow time for parking and seating before the ceremony begins.",
     },
   ],
 
@@ -316,17 +367,41 @@ export const weddingData = {
       {
         category: "Restaurants",
         items: [
-          { name: "The Fancy Fork", type: "Fine Dining", description: "Amazing tasting menu" },
-          { name: "Coastal Catch", type: "Seafood", description: "Fresh seafood with bay views" },
-          { name: "Pasta Paradise", type: "Italian", description: "Homemade pasta and wine" },
+          {
+            name: "The Fancy Fork",
+            type: "Fine Dining",
+            description: "Amazing tasting menu",
+          },
+          {
+            name: "Coastal Catch",
+            type: "Seafood",
+            description: "Fresh seafood with bay views",
+          },
+          {
+            name: "Pasta Paradise",
+            type: "Italian",
+            description: "Homemade pasta and wine",
+          },
         ],
       },
       {
         category: "Things to Do",
         items: [
-          { name: "Golden Gate Bridge", type: "Landmark", description: "Iconic bridge with walking paths" },
-          { name: "Alcatraz Island", type: "Tour", description: "Historic prison tour" },
-          { name: "Fisherman's Wharf", type: "Entertainment", description: "Shops, restaurants, and sea lions" },
+          {
+            name: "Golden Gate Bridge",
+            type: "Landmark",
+            description: "Iconic bridge with walking paths",
+          },
+          {
+            name: "Alcatraz Island",
+            type: "Tour",
+            description: "Historic prison tour",
+          },
+          {
+            name: "Fisherman's Wharf",
+            type: "Entertainment",
+            description: "Shops, restaurants, and sea lions",
+          },
         ],
       },
     ],
@@ -336,7 +411,8 @@ export const weddingData = {
         date: "June 19th, 2026",
         time: "7:00 PM",
         location: "The Rooftop Bar, The Grand Hotel",
-        description: "Join us for casual drinks and appetizers the night before the wedding!",
+        description:
+          "Join us for casual drinks and appetizers the night before the wedding!",
         rsvpRequired: false,
       },
       {
@@ -344,7 +420,8 @@ export const weddingData = {
         date: "June 21st, 2026",
         time: "10:00 AM",
         location: "The Garden Cafe",
-        description: "Let's continue the celebration with a relaxed brunch before everyone heads home.",
+        description:
+          "Let's continue the celebration with a relaxed brunch before everyone heads home.",
         rsvpRequired: true,
       },
     ],
@@ -352,4 +429,3 @@ export const weddingData = {
 };
 
 export default weddingData;
-
