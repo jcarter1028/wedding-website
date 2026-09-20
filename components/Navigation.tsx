@@ -10,10 +10,10 @@ import Image from "next/image";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Accommodation", href: "/accommodation" },
+  { label: "Travel", href: "/travel" },
   { label: "Details", href: "/details" },
   { label: "Timeline", href: "/timeline" },
   { label: "Registry", href: "/registry" },
-  { label: "Travel", href: "/travel" },
   { label: "Wedding Party", href: "/party" },
   { label: "For Our Guests", href: "/guests" },
   { label: "FAQ", href: "/faq" },

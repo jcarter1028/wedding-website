@@ -1,9 +1,9 @@
-"use client";
-
 interface TextProps {
   text: string;
   alignment?: "left" | "right" | "center";
   bold?: boolean;
+  italic?: boolean;
+  size?: "normal" | "lg" | "xl";
 }
 
 const alignmentClasses = {
@@ -12,16 +12,24 @@ const alignmentClasses = {
   right: "text-right",
 };
 
+const sizeClasses = {
+  normal: "text-base",
+  lg: "text-xl",
+  xl: "text-2xl",
+};
+
 export default function Text({
   text,
   alignment = "center",
   bold = false,
+  italic = false,
+  size = "normal",
 }: TextProps) {
   return (
     <p
-      className={`${alignmentClasses[alignment]} text-gray-600 text-lg ${
+      className={`${alignmentClasses[alignment]} ${sizeClasses[size]} text-gray-600 ${
         bold ? "font-semibold" : "font-normal"
-      } my-4`}
+      } ${italic ? "italic" : ""} my-4 `}
     >
       {text}
     </p>

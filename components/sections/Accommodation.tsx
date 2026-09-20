@@ -1,21 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import FadeIn from "../FadeIn";
-import weddingData from "@/config/wedding-data";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Title from "../Title";
 import Text from "../Text";
 
 export default function Accommodation() {
-  const { faq } = weddingData;
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleQuestion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <section className="pt-24 md:pt-28 pb-20 md:pb-32 px-4 bg-gradient-to-b from-cream-50 to-cream-100 relative overflow-hidden">
       <div className="max-w-4xl mx-auto relative">

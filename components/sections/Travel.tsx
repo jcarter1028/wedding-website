@@ -3,323 +3,250 @@
 import FadeIn from "../FadeIn";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-const accommodations = [
-  {
-    name: "Raymond House Inn",
-    address: "111 S Ridge St, Port Sanilac, MI 48469",
-    phone: "(810) 622-8800",
-    url: "https://www.raymondhouseinn.com/",
-    description: "Victorian-style B&B near downtown",
-  },
-  {
-    name: "Holland's Little House In the Country B & B",
-    address: "1995 N Huron View, Port Sanilac, MI 48469",
-    url: "https://www.google.com/search?q=Holland%27s+Little+House+In+the+Country+B+%26+B+Port+Sanilac+MI",
-    description: "Cozy countryside bed & breakfast",
-  },
-  {
-    name: "Lake Huron Lodge",
-    address: "7175 Huron Ave, Lexington, MI 48450",
-    phone: "(810) 359-7802",
-    url: "https://www.lakehuronlodge.com/",
-    description: "Top-rated lodge with easy beach access",
-  },
-  {
-    name: "Inn the Garden Bed & Breakfast",
-    address: "7156 Huron Ave, Lexington, MI 48450",
-    phone: "(810) 359-8966",
-    url: "https://www.inngarden.com/",
-    description: "Highly reviewed B&B with gardens",
-  },
-  {
-    name: "Lake Winds Motel",
-    address: "6997 Lakeshore Rd, Lexington, MI 48450",
-    phone: "(810) 359-5196",
-    url: "https://www.lakewindsmotelthebeachgetaway.com/",
-    description: "Beachside motel with great reviews",
-  },
-  {
-    name: "Lakeview Hills Golf & Resort",
-    address: "6560 East Peck Road, Lexington, MI 48450",
-    phone: "(810) 359-7333",
-    url: "https://www.lakeviewhills.com/",
-    description: "Golf resort with on-site lodging, dining & spa",
-  },
-  {
-    name: "Butler Bed & Breakfast",
-    address: "5774 Main St, Lexington, MI 48450",
-    url: "https://www.butlerphotosbb.com/",
-    description: "Elegant historic B&B",
-  },
-  {
-    name: "Lexington's LillyPad",
-    address: "3832 Lakeshore Rd, Lexington, MI 48450",
-    phone: "(810) 404-2771",
-    url: "https://lexingtonslillypad.wixsite.com/my-site-1",
-    description: "Popular mid-range motel",
-  },
-  {
-    name: "Lusky's Lakefront Cottages",
-    address: "8949 Lakeshore Rd, Lexington, MI 48450",
-    phone: "(810) 327-6889",
-    url: "https://www.luskys.com/",
-    description: "Lakefront cottage rentals",
-  },
-  {
-    name: "Wipp Inn",
-    address: "2927 S Lakeshore Rd, Applegate, MI 48401",
-    phone: "(810) 359-2800",
-    url: "https://www.wippinn.com/",
-    description: "Highly-rated lodging near lakeshore",
-  },
-  {
-    name: "Holiday Inn Express & Suites Port Huron",
-    address: "2021 Water Street, Port Huron, MI 48060",
-    phone: "(810) 662-3400",
-    url: "https://www.ihg.com/holidayinnexpress/hotels/us/en/port-huron/phnes/hoteldetail",
-    description: "Modern hotel with pool & free breakfast",
-  },
-  {
-    name: "Days Inn & Suites Port Huron",
-    address: "Port Huron, MI",
-    url: "https://www.wyndhamhotels.com/days-inn/port-huron-michigan/days-inn-and-suites-port-huron/overview",
-    description: "Comfortable chain hotel accommodations",
-  },
-  {
-    name: "Quality Inn Port Huron",
-    address: "Port Huron, MI",
-    url: "https://www.choicehotels.com/michigan/port-huron/quality-inn-hotels/mi131",
-    description: "Reliable chain hotel with amenities",
-  },
-  {
-    name: "DoubleTree by Hilton Port Huron",
-    address: "Port Huron, MI",
-    url: "https://www.hilton.com/en/hotels/phntedt-doubletree-port-huron/",
-    description: "Upscale hotel with full service amenities",
-  },
-  {
-    name: "J & MH Westpark Inn",
-    address: "440 Sanilac Rd, Sandusky, MI 48471",
-    url: "https://www.google.com/search?q=J+%26+MH+Westpark+Inn+Sandusky+MI",
-    description: "Affordable inn near central Sandusky",
-  },
-  {
-    name: "Thumb Heritage Inn",
-    address: "405 Sanilac Rd, Sandusky, MI 48471",
-    phone: "(810) 648-4811",
-    url: "https://www.thumbheritageinn.com/",
-    description: "Simple budget motel",
-  },
-];
+import Title from "../Title";
+import Text from "../Text";
 
 export default function Travel() {
   return (
     <section className="pt-24 md:pt-28 pb-20 md:pb-32 px-4 bg-gradient-to-b from-cream-50 to-cream-100 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto relative">
-        {/* Subtle Floral - Top Left */}
+      <div className="max-w-4xl mx-auto relative">
+        {/* Floral - Top Left */}
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="absolute -top-8 -left-8 md:-left-16 w-36 md:w-48 h-36 md:h-48 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/floral 3.png"
-            alt=""
-            fill
-            className="object-contain opacity-80"
-            style={{ transform: 'rotate(10deg)' }}
-          />
-        </motion.div>
-
-        {/* Subtle Floral - Top Right */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="absolute -top-8 -right-8 md:-right-16 w-36 md:w-48 h-36 md:h-48 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/floral 4.png"
-            alt=""
-            fill
-            className="object-contain opacity-80"
-            style={{ transform: 'rotate(-10deg)' }}
-          />
-        </motion.div>
-
-        {/* Subtle Floral - Bottom Left */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="absolute -bottom-8 -left-8 md:-left-16 w-40 md:w-52 h-40 md:h-52 pointer-events-none z-0"
+          initial={{ opacity: 0, x: -30, y: -30 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="absolute -top-12 -left-8 md:-left-16 w-40 md:w-52 h-40 md:h-52 pointer-events-none z-0"
         >
           <Image
             src="/images/Floral 1.png"
             alt=""
             fill
             className="object-contain opacity-80"
-            style={{ transform: 'rotate(150deg)' }}
+            style={{ transform: "rotate(-20deg)" }}
           />
         </motion.div>
 
-        {/* Subtle Floral - Bottom Right */}
+        {/* Floral - Top Right */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="absolute -bottom-8 -right-8 md:-right-16 w-40 md:w-52 h-40 md:h-52 pointer-events-none z-0"
+          initial={{ opacity: 0, x: 30, y: -30 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="absolute -top-12 -right-8 md:-right-16 w-40 md:w-52 h-40 md:h-52 pointer-events-none z-0"
         >
           <Image
             src="/images/Floral 2.png"
             alt=""
             fill
             className="object-contain opacity-80"
-            style={{ transform: 'rotate(-150deg)' }}
+            style={{ transform: "rotate(25deg)" }}
           />
         </motion.div>
 
-        {/* Additional Floral - Middle Left */}
+        {/* Floral - Middle Left */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1.1 }}
-          className="absolute top-1/3 -left-6 md:-left-8 w-32 md:w-40 h-32 md:h-40 pointer-events-none z-0"
+          transition={{ duration: 1, delay: 0.8 }}
+          className="absolute top-1/2 -left-6 md:-left-12 w-36 md:w-48 h-36 md:h-48 pointer-events-none z-0"
         >
           <Image
-            src="/images/Floral 2.png"
+            src="/images/floral 3.png"
             alt=""
             fill
             className="object-contain opacity-75"
-            style={{ transform: 'rotate(45deg)' }}
+            style={{ transform: "rotate(30deg)" }}
           />
         </motion.div>
 
-        {/* Additional Floral - Middle Right */}
+        {/* Floral - Middle Right */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="absolute top-1/2 -right-6 md:-right-8 w-32 md:w-40 h-32 md:h-40 pointer-events-none z-0"
+          transition={{ duration: 1, delay: 1 }}
+          className="absolute top-1/2 -right-6 md:-right-12 w-36 md:w-48 h-36 md:h-48 pointer-events-none z-0"
         >
           <Image
             src="/images/floral 4.png"
             alt=""
             fill
             className="object-contain opacity-75"
-            style={{ transform: 'rotate(-45deg)' }}
+            style={{ transform: "rotate(-35deg)" }}
           />
         </motion.div>
 
-        {/* Extra Floral - Upper Middle */}
+        {/* Floral - Bottom Left */}
         <motion.div
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="absolute top-[15%] left-[10%] w-28 md:w-36 h-28 md:h-36 pointer-events-none z-0"
+          transition={{ duration: 1, delay: 1.2 }}
+          className="absolute -bottom-10 -left-8 md:-left-16 w-44 md:w-56 h-44 md:h-56 pointer-events-none z-0"
         >
           <Image
             src="/images/Floral 2.png"
             alt=""
             fill
-            className="object-contain opacity-65"
-            style={{ transform: 'rotate(25deg)' }}
+            className="object-contain opacity-73"
+            style={{ transform: "rotate(140deg)" }}
           />
         </motion.div>
 
-        {/* Extra Floral - Lower Middle */}
+        {/* Floral - Bottom Right */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.3 }}
-          className="absolute bottom-[15%] right-[10%] w-28 md:w-36 h-28 md:h-36 pointer-events-none z-0"
+          className="absolute -bottom-10 -right-8 md:-right-16 w-44 md:w-56 h-44 md:h-56 pointer-events-none z-0"
+        >
+          <Image
+            src="/images/Floral 1.png"
+            alt=""
+            fill
+            className="object-contain opacity-73"
+            style={{ transform: "rotate(-140deg) scaleX(-1)" }}
+          />
+        </motion.div>
+
+        {/* Extra Floral - Upper Center Left */}
+        <motion.div
+          initial={{ opacity: 0, rotate: -15 }}
+          animate={{ opacity: 1, rotate: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="absolute top-[20%] left-8 md:left-16 w-28 md:w-36 h-28 md:h-36 pointer-events-none z-0"
+        >
+          <Image
+            src="/images/floral 4.png"
+            alt=""
+            fill
+            className="object-contain opacity-70"
+            style={{ transform: "rotate(50deg)" }}
+          />
+        </motion.div>
+
+        {/* Extra Floral - Lower Center Right */}
+        <motion.div
+          initial={{ opacity: 0, rotate: 15 }}
+          animate={{ opacity: 1, rotate: 0 }}
+          transition={{ duration: 1, delay: 1.1 }}
+          className="absolute bottom-[25%] right-8 md:right-16 w-28 md:w-36 h-28 md:h-36 pointer-events-none z-0"
         >
           <Image
             src="/images/floral 3.png"
             alt=""
             fill
-            className="object-contain opacity-65"
-            style={{ transform: 'rotate(-35deg)' }}
+            className="object-contain opacity-70"
+            style={{ transform: "rotate(-55deg)" }}
           />
         </motion.div>
-
         <FadeIn>
-          <h2 className="font-script text-5xl md:text-7xl text-center text-sage-700 mb-4">
-            Travel & Stay
-          </h2>
-          <p className="text-center text-gray-700 mb-6 text-base md:text-lg font-light max-w-3xl mx-auto">
-            We sincerely apologize, but the hotels in the area did not offer hotel blocks. You can still book at the following places near the venue.
-          </p>
-        </FadeIn>
+          <Title title="How to get there?" />
 
-        {/* Accommodations */}
-        <div className="mb-16">
-          <FadeIn delay={0.1}>
-            <h3 className="text-3xl font-medium text-sage-800 mb-8 text-center">
-              Local Accommodations
-            </h3>
-          </FadeIn>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {accommodations.map((accommodation, index) => (
-              <FadeIn key={accommodation.name} delay={0.2 + index * 0.05}>
-                <motion.div
-                  whileHover={{ y: -5, scale: 1.02 }}
-                  className="paper-card block bg-white/80 backdrop-blur-sm shadow-md p-6 h-full group hover:shadow-lg transition-all border border-sage-100/50"
-                >
-                  <div className="flex flex-col h-full">
-                    <div className="flex-1">
-                      <h4 className="text-lg font-normal text-gray-800 mb-3">
-                        {accommodation.name}
-                      </h4>
-                      <p className="text-sm text-gray-600 font-light mb-2">
-                        {accommodation.address}
-                      </p>
-                      {accommodation.phone && (
-                        <p className="text-sm text-sage-600 font-light mb-2">
-                          {accommodation.phone}
-                        </p>
-                      )}
-                      {accommodation.description && (
-                        <p className="text-sm text-gray-500 font-light italic mt-3">
-                          {accommodation.description}
-                        </p>
-                      )}
-                    </div>
-                    
-                    {accommodation.url && (
-                      <div className="mt-4 pt-4 border-t border-sage-100">
-                        <a
-                          href={accommodation.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-sage-600 font-normal hover:text-sage-700 inline-flex items-center gap-1"
-                        >
-                          {accommodation.url.includes('lakeviewhills.com') ? 'Visit Website' : 'View on Google Maps'}
-                          <svg
-                            className="w-4 h-4"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="1.5"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                          </svg>
-                        </a>
-                      </div>
-                    )}
-                  </div>
-                </motion.div>
-              </FadeIn>
-            ))}
+          <div className="relative z-10 backdrop-blur-sm">
+            <Text
+              alignment="left"
+              text="Your first destination is Vandans, where you’ll find the Golmerbahn that takes you up to Haus Matschwitz, as described in the accommodation section."
+            />
+            <Text
+              alignment="left"
+              text="Travelling by car is probably the simplest option, especially if you’re travelling as a group. However, Vandans is also well connected by train, so public transport is a good option too. "
+            />
+            <Text bold alignment="center" text="By plane" size="xl" />
+
+            <Text
+              alignment="left"
+              text="There are several airports within reach. Zürich, Memmingen and Innsbruck are probably the most useful, but it’s worth comparing flights and travel times before booking. Once you have landed, you will still need to make your way to Vandans, so we have included approximate timings for you. "
+            />
+            <div className="w-full overflow-x-auto my-8">
+              <table className="w-full text-left text-gray-600">
+                <thead>
+                  <tr className="border-b border-gray-300">
+                    <th className="px-4 py-3 font-semibold">Airport</th>
+                    <th className="px-4 py-3 font-semibold">Approx. by car</th>
+                    <th className="px-4 py-3 font-semibold">
+                      Approx. by public transport
+                    </th>
+                    <th className="px-4 py-3 font-semibold">Good to know</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr className="border-b border-gray-200">
+                    <td className="px-4 py-4 font-semibold whitespace-nowrap">
+                      Zürich (ZRH) 🇨🇭
+                    </td>
+                    <td className="px-4 py-4 whitespace-nowrap">2h</td>
+                    <td className="px-4 py-4 whitespace-nowrap">3h</td>
+                    <td className="px-4 py-4">
+                      Lots of flights and excellent train connections
+                    </td>
+                  </tr>
+
+                  <tr className="border-b border-gray-200">
+                    <td className="px-4 py-4 font-semibold whitespace-nowrap">
+                      Memmingen (FMM) 🇩🇪
+                    </td>
+                    <td className="px-4 py-4 whitespace-nowrap">1h30</td>
+                    <td className="px-4 py-4 whitespace-nowrap">2h45</td>
+                    <td className="px-4 py-4">
+                      Often good for low-cost flights; car hire is easy, but
+                      public transport connections are sparse.
+                    </td>
+                  </tr>
+
+                  <tr className="border-b border-gray-200">
+                    <td className="px-4 py-4 font-semibold whitespace-nowrap">
+                      Innsbruck (INN) 🇦🇹
+                    </td>
+                    <td className="px-4 py-4 whitespace-nowrap">1h45</td>
+                    <td className="px-4 py-4 whitespace-nowrap">2h30</td>
+                    <td className="px-4 py-4">
+                      Smaller airport; good option if you find a direct flight
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="px-4 py-4 font-semibold whitespace-nowrap">
+                      Munich (MUC) 🇩🇪
+                    </td>
+                    <td className="px-4 py-4 whitespace-nowrap">3h</td>
+                    <td className="px-4 py-4 whitespace-nowrap">4–5 hrs</td>
+                    <td className="px-4 py-4">
+                      Huge choice of flights, but a considerably longer journey
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <Text bold alignment="center" text="By train" size="xl" />
+
+            <Text
+              alignment="left"
+              text="Vandans has its own train station, with connections from across Austria and Switzerland. You can then either walk to the Golmerbahn station from the train (20min), or take the bus (10min). "
+            />
+            <Text bold alignment="left" text="Booking train tickets" />
+            <Text
+              alignment="left"
+              text="For Austria and international journeys into Austria, check the ÖBB app. For journeys starting in Switzerland, also check the SBB app. It's often worth comparing the two. International apps such as** Trainline** can also let you book train tickets in the area, but may not have all options available. "
+            />
+            <Text
+              italic
+              alignment="left"
+              text="SBB tip: Unless you have an annual Swiss Half Fare Travelcard, make sure you untick “half fare” when checking prices or booking via SBB.   "
+            />
+
+            <Text bold alignment="center" text="By car" size="xl" />
+
+            <Text
+              alignment="left"
+              text="There is parking at the bottom of the Golmerbahn in Vandans, or after the first section of the lift in Latschau (see map in accommodation section). The parking is free, and you can park there over the whole weekend. "
+            />
+            <Text
+              alignment="left"
+              text="We recommend parking in Latschau if possible, which minimises the lift sections you need to take up. "
+            />
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );
 }
-
