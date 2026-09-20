@@ -20,7 +20,7 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover"
           style={{
-            backgroundImage: "url('/images/hero.jpg?v=1')",
+            backgroundImage: "url('/images/uj.jpeg')",
             backgroundPosition: "55% center",
           }}
         />
@@ -68,6 +68,16 @@ export default function Hero() {
             className="text-base sm:text-lg md:text-xl text-white/90 tracking-wide drop-shadow-lg mb-16 sm:mb-20"
           >
             {weddingData.weddingLocation.location}
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.6 }}
+            className="text-center text-base sm:text-lg md:text-xl text-white/90 tracking-wide drop-shadow-lg mb-16 sm:mb-20 max-w-lg"
+          >
+            Welcome to our wedding website! We’re so excited to celebrate with
+            you in the Austrian mountains!{" "}
           </motion.p>
         </motion.div>
 
