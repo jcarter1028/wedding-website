@@ -362,7 +362,7 @@ export default function Home() {
               plan your stay.{" "}
             </p>
             <Link
-              href="/timeline"
+              href="/activities"
               className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md border-2 border-sage-200/70 text-white rounded-full hover:bg-sage-100 hover:text-sage-800 transition-all duration-300 font-medium text-base sm:text-lg group"
             >
               <span className="flex items-center gap-2">

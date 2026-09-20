@@ -11,12 +11,8 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "Accommodation", href: "/accommodation" },
   { label: "Travel", href: "/travel" },
-  { label: "Details", href: "/details" },
   { label: "Timeline", href: "/timeline" },
-  { label: "Registry", href: "/registry" },
-  { label: "Wedding Party", href: "/party" },
-  { label: "For Our Guests", href: "/guests" },
-  { label: "FAQ", href: "/faq" },
+  { label: "Activities", href: "/activities" },
   { label: "RSVP", href: "/rsvp" },
 ];
 
