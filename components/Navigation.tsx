@@ -13,6 +13,7 @@ const navItems = [
   { label: "Travel", href: "/travel" },
   { label: "Timeline", href: "/timeline" },
   { label: "Activities", href: "/activities" },
+  { label: "FAQs", href: "/faq" },
   { label: "RSVP", href: "/rsvp" },
 ];
 
