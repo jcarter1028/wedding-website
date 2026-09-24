@@ -5,7 +5,7 @@
 
 @layer base {
   body {
-    @apply font-heading text-gray-800 antialiased bg-[#F1F5EF];
+    @apply font-heading text-gray-800 antialiased bg-[#FCFDFC];
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -28,7 +28,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #E8EFE4;
+  background: #F8FAF7;
 }
 
 ::-webkit-scrollbar-thumb {

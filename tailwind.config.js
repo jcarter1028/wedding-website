@@ -14,10 +14,10 @@ module.exports = {
       },
       colors: {
         cream: {
-          50: '#F1F5EF',
-          100: '#E8EFE4',
-          200: '#DCE7D6',
-          300: '#CDDBC5',
+          50: '#FCFDFC',
+          100: '#F8FAF7',
+          200: '#EFF4EC',
+          300: '#E0E9DB',
         },
         sage: {
           50: '#F4F6F4',
@@ -27,6 +27,7 @@ module.exports = {
           400: '#7FA47F',
           500: '#6B8E6B',
           600: '#5A7A5A',
+          700: '#456B45',
         },
         blush: {
           50: '#FDF5F5',

@@ -41,20 +41,27 @@ const weekend: WeekendDay[] = [
     items: [
       {
         title: "Breakfast",
-        description:
-          "We are still defining the details for the day and will update this section soon.",
-        extra: "The rough plan includes:",
-        list: [
-          "Breakfast at the chalet",
-          "A short hike (optional)",
-          "Lunch apéritif at a restaurant at the top of the mountain",
-          "Celebration dinner at the chalet",
-          "Chats, fun and games",
-        ],
+        description: "Breakfast at Haus Matschwitz.",
       },
       {
-        title: "Actvity / Hike (optional)",
-        description: "Enjoy",
+        title: "Wedding activity / optional hike",
+        description:
+          "Optional fun activity and hike for anyone who would like to join.",
+      },
+      {
+        title: "Wedding apéritif",
+        description:
+          "Apéritif at Restaurant Feineck, at the top of the mountain.",
+        extra:
+          "This is also reachable by taking the last section of the lift, or doing the optional 1h30 walk up.",
+      },
+      {
+        title: "Rest",
+        description: "A bit of time to relax before dinner.",
+      },
+      {
+        title: "Dinner",
+        description: "Celebration dinner at the chalet.",
       },
     ],
   },
@@ -85,6 +92,7 @@ export default function Timeline() {
             <Title title="Our Weekend" />
             <Text text="We really just want to spend time with everyone, and as we love the mountains, we’d love for you all to join us there! It won’t be a traditional wedding celebration, but there will still be plenty of food, drinks, games, good company and unbeatable mountain views." />
             <Text text="Here’s roughly what the weekend will look like. We are still finalising details, so will udpate the page in due course." />
+
             <div className="relative mt-14 md:mt-16">
               {/* Timeline line — LEFT */}
               <div className="absolute left-3 md:left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-sage-200 via-sage-300 to-sage-200" />
@@ -117,8 +125,8 @@ export default function Timeline() {
                             <div className="absolute left-[-43px] md:left-[-66px] top-6 w-4 h-4 rounded-full bg-sage-400 border-4 border-cream-50" />
 
                             {/* Card — RIGHT */}
-                            <div className="paper-card bg-white/80 backdrop-blur-sm shadow-md p-6 md:p-7 border border-sage-100/50">
-                              <div className="text-sage-600 font-medium text-xl mb-2">
+                            <div className="paper-card bg-sage-100/85 backdrop-blur-sm shadow-md p-6 md:p-7 border border-sage-200">
+                              <div className="text-sage-700 font-medium text-xl mb-2">
                                 {item.title}
                               </div>
 

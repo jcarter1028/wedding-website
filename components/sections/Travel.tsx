@@ -101,7 +101,7 @@ export default function Travel() {
             <Text bold alignment="left" text="Booking train tickets" />
             <Text
               alignment="left"
-              text="For Austria and international journeys into Austria, check the ÖBB app. For journeys starting in Switzerland, also check the SBB app. It's often worth comparing the two. International apps such as** Trainline** can also let you book train tickets in the area, but may not have all options available. "
+              text="For Austria and international journeys into Austria, check the ÖBB app. For journeys starting in Switzerland, also check the SBB app. It's often worth comparing the two. International apps such as Trainline can also let you book train tickets in the area, but may not have all options available. "
             />
             <Text
               italic

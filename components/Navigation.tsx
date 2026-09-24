@@ -43,7 +43,7 @@ export default function Navigation() {
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           showSolidNav
-            ? "bg-cream-50/95 backdrop-blur-md shadow-lg"
+            ? "bg-sage-100/95 backdrop-blur-md shadow-lg"
             : "bg-transparent"
         }`}
       >

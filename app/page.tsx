@@ -335,10 +335,8 @@ export default function Home() {
               What next ?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-              Although it may seem early, we’d ask you to check the details and
-              logistics, then let us know on the RSVP page whether you’ll be
-              joining us by… This will help us organise accommodation options
-              for everyone up the mountain.
+              Please complete RSVPs by December 1st 2026, so we can figure out
+              accommodation logistics in the mountain for everyone.
             </p>
             <Link
               href="/rsvp"
