@@ -41,25 +41,20 @@ const weekend: WeekendDay[] = [
     items: [
       {
         title: "Breakfast",
-        description: "Breakfast at the chalet.",
-      },
-      {
-        title: "Wedding activity / optional hike",
         description:
-          "The main activity for the day, with an optional hike for anyone who would like to join.",
+          "We are still defining the details for the day and will update this section soon.",
+        extra: "The rough plan includes:",
+        list: [
+          "Breakfast at the chalet",
+          "A short hike (optional)",
+          "Lunch apéritif at a restaurant at the top of the mountain",
+          "Celebration dinner at the chalet",
+          "Chats, fun and games",
+        ],
       },
       {
-        title: "Wedding apéritif",
-        description:
-          "Apéritif at a restaurant at the top of the mountain.",
-      },
-      {
-        title: "Rest",
-        description: "A bit of time to relax before dinner.",
-      },
-      {
-        title: "Dinner",
-        description: "Celebration dinner at the chalet.",
+        title: "Actvity / Hike (optional)",
+        description: "Enjoy",
       },
     ],
   },
@@ -88,12 +83,8 @@ export default function Timeline() {
         <FadeIn className="relative z-10">
           <div className="relative z-10">
             <Title title="Our Weekend" />
-
-            <Text
-              text="Here’s roughly what the weekend will look like. We are still finalising details, so will udpate the page in due course."
-              size="lg"
-            />
-
+            <Text text="We really just want to spend time with everyone, and as we love the mountains, we’d love for you all to join us there! It won’t be a traditional wedding celebration, but there will still be plenty of food, drinks, games, good company and unbeatable mountain views." />
+            <Text text="Here’s roughly what the weekend will look like. We are still finalising details, so will udpate the page in due course." />
             <div className="relative mt-14 md:mt-16">
               {/* Timeline line — LEFT */}
               <div className="absolute left-3 md:left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-sage-200 via-sage-300 to-sage-200" />

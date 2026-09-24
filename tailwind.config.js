@@ -14,10 +14,10 @@ module.exports = {
       },
       colors: {
         cream: {
-          50: '#FAF8F3',
-          100: '#F5F3EE',
-          200: '#EBE7DD',
-          300: '#DDD7C7',
+          50: '#F1F5EF',
+          100: '#E8EFE4',
+          200: '#DCE7D6',
+          300: '#CDDBC5',
         },
         sage: {
           50: '#F4F6F4',
@@ -44,5 +44,3 @@ module.exports = {
   },
   plugins: [],
 }
-
-
