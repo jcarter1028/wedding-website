@@ -30,7 +30,7 @@ const weekend: WeekendDay[] = [
           "In case of emergency or delayed flights, we do have the possibility of getting one or two cars up the private access road — but please do not plan with this option. Aim to be there comfortably before 5!",
       },
       {
-        title: "Dinner & drinks",
+        title: "Welcome drinks & Dinner",
         description:
           "Catch up, and enjoy a simple dinner and drinks at the chalet.",
       },
@@ -40,17 +40,26 @@ const weekend: WeekendDay[] = [
     day: "Saturday",
     items: [
       {
-        title: "The big day",
+        title: "Breakfast",
+        description: "Breakfast at the chalet.",
+      },
+      {
+        title: "Wedding activity / optional hike",
         description:
-          "We are still defining the details for the day and will update this section soon.",
-        extra: "The rough plan includes:",
-        list: [
-          "Breakfast at the chalet",
-          "A short hike (optional)",
-          "Lunch apéritif at a restaurant at the top of the mountain",
-          "Celebration dinner at the chalet",
-          "Chats, fun and games",
-        ],
+          "The main activity for the day, with an optional hike for anyone who would like to join.",
+      },
+      {
+        title: "Wedding apéritif",
+        description:
+          "Apéritif at a restaurant at the top of the mountain.",
+      },
+      {
+        title: "Rest",
+        description: "A bit of time to relax before dinner.",
+      },
+      {
+        title: "Dinner",
+        description: "Celebration dinner at the chalet.",
       },
     ],
   },
@@ -81,7 +90,7 @@ export default function Timeline() {
             <Title title="Our Weekend" />
 
             <Text
-              text="Here’s roughly what the weekend will look like (we will update this page in due course):"
+              text="Here’s roughly what the weekend will look like. We are still finalising details, so will udpate the page in due course."
               size="lg"
             />
 
