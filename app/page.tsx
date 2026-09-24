@@ -291,10 +291,10 @@ export default function Home() {
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
               If you have time, we highly recommend spending a few extra days in
               the area. The mountains are truly an outdoor paradise, with
-              countless activities to enjoy. But if they are not your things,
-              this area is also has beautiful rivers, lakes and historical
-              towns. We’ve put together a small list of suggestions to help you
-              plan your stay.{" "}
+              countless activities to enjoy. But if they’re not your thing, the
+              area also has beautiful rivers, lakes and historical towns. We’ve
+              put together a small list of suggestions to help you plan your
+              stay.
             </p>
             <Link
               href="/activities"
@@ -332,7 +332,7 @@ export default function Home() {
             className="relative z-10 text-center px-4 sm:px-6"
           >
             <h2 className="font-script text-4xl sm:text-5xl md:text-7xl text-white mb-6 sm:mb-8 drop-shadow-2xl">
-              What next ?
+              What next?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
               Please complete RSVPs by December 1st 2026, so we can figure out

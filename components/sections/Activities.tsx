@@ -125,13 +125,13 @@ export default function Activities() {
               <figure className="w-full lg:w-1/2">
                 <Image
                   src="/images/Quinten.jpeg"
-                  alt="Quiten, Wallensee"
+                  alt="Quinten, Walensee"
                   width={800}
                   height={600}
                   className="w-full rounded-lg object-cover"
                 />
                 <figcaption className="mt-2 text-center text-sm text-gray-600 font-light">
-                  Wallensee, Switzerland
+                  Walensee, Switzerland
                 </figcaption>
               </figure>
 

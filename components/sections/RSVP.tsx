@@ -14,6 +14,7 @@ export default function RSVP() {
         <FadeIn className="relative z-10">
           <Title title="RSVP" />
           <Text text="We can't wait to celebrate with you!" />
+          <Text text="Please fill in the RSVP form by December 1st so we can sort accommodation logistics with the venue as soon as possible." />
         </FadeIn>
 
         <FadeIn delay={0.15} className="relative z-10">

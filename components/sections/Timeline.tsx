@@ -8,9 +8,7 @@ import BackgroundAnimation from "../BackgroundAnimation";
 
 interface WeekendItem {
   title: string;
-  description: string;
-  extra?: string;
-  list?: string[];
+  description: string[];
 }
 
 interface WeekendDay {
@@ -23,16 +21,18 @@ const weekend: WeekendDay[] = [
     day: "Friday",
     items: [
       {
-        title: "Arrival at the chalet",
-        description:
+        title: "Arrival & welcome drink",
+        description: [
           "Make your way up to the chalet by lift or on foot. The last lift up is at 5pm, so please aim to arrive before then.",
-        extra:
+          "Once everyone has made their way up the mountain, we’ll get the weekend started with a welcome drink on us!",
           "In case of emergency or delayed flights, we do have the possibility of getting one or two cars up the private access road — but please do not plan with this option. Aim to be there comfortably before 5!",
+        ],
       },
       {
         title: "Welcome drinks & Dinner",
-        description:
-          "Catch up, and enjoy a simple dinner and drinks at the chalet.",
+        description: [
+          "We’ll have dinner together at the restaurant, where everyone can order and pay for their own food and drinks. Afterwards, the bar will be open for us to relax, catch up and enjoy our first evening in the mountains.",
+        ],
       },
     ],
   },
@@ -41,27 +41,28 @@ const weekend: WeekendDay[] = [
     items: [
       {
         title: "Breakfast",
-        description: "Breakfast at Haus Matschwitz.",
+        description: ["Breakfast at Haus Matschwitz."],
       },
       {
         title: "Wedding activity / optional hike",
-        description:
+        description: [
           "Optional fun activity and hike for anyone who would like to join.",
+        ],
       },
       {
         title: "Wedding apéritif",
-        description:
+        description: [
           "Apéritif at Restaurant Feineck, at the top of the mountain.",
-        extra:
-          "This is also reachable by taking the last section of the lift, or doing the optional 1h30 walk up.",
+          "This is reachable by taking the last section of the lift or doing the optional 1h30 walk up.",
+        ],
       },
       {
         title: "Rest",
-        description: "A bit of time to relax before dinner.",
+        description: ["A bit of time to relax before dinner."],
       },
       {
         title: "Dinner",
-        description: "Celebration dinner at the chalet.",
+        description: ["Celebration dinner at the chalet."],
       },
     ],
   },
@@ -70,13 +71,15 @@ const weekend: WeekendDay[] = [
     items: [
       {
         title: "Mountain brunch",
-        description:
-          "Brunch altogether at the chalet, included as part of the wedding.",
+        description: [
+          "Brunch all together at the chalet, included as part of the wedding.",
+        ],
       },
       {
         title: "Make your way down the mountain",
-        description:
+        description: [
           "There are some fun options for getting back down! Try the slides, mountain carts or Alpine Coaster — or, of course, hike or take the lift down.",
+        ],
       },
     ],
   },
@@ -91,7 +94,7 @@ export default function Timeline() {
           <div className="relative z-10">
             <Title title="Our Weekend" />
             <Text text="We really just want to spend time with everyone, and as we love the mountains, we’d love for you all to join us there! It won’t be a traditional wedding celebration, but there will still be plenty of food, drinks, games, good company and unbeatable mountain views." />
-            <Text text="Here’s roughly what the weekend will look like. We are still finalising details, so will udpate the page in due course." />
+            <Text text="Here’s roughly what the weekend will look like. We are still finalising details, so will update the page in due course." />
 
             <div className="relative mt-14 md:mt-16">
               {/* Timeline line — LEFT */}
@@ -130,26 +133,11 @@ export default function Timeline() {
                                 {item.title}
                               </div>
 
-                              <div className="text-gray-600 text-base leading-relaxed">
-                                {item.description}
+                              <div className="space-y-3 text-gray-600 text-base leading-relaxed">
+                                {item.description.map((paragraph) => (
+                                  <p key={paragraph}>{paragraph}</p>
+                                ))}
                               </div>
-
-                              {item.extra && (
-                                <div className="text-gray-600 text-base leading-relaxed mt-3">
-                                  {item.extra}
-                                </div>
-                              )}
-
-                              {item.list && (
-                                <ul className="mt-4 space-y-2 text-gray-600 text-base">
-                                  {item.list.map((entry) => (
-                                    <li key={entry} className="flex gap-3">
-                                      <span>•</span>
-                                      <span>{entry}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              )}
                             </div>
                           </motion.div>
                         </FadeIn>
