@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/sections/Hero";
 import weddingData from "@/config/wedding-data";
+import { Analytics } from "@vercel/analytics/next";
 
 // Large immersive photo section component
 function ImmersivePhotoSection({
@@ -24,6 +25,7 @@ function ImmersivePhotoSection({
 }) {
   return (
     <section className="relative min-h-screen h-screen md:h-screen flex items-center justify-center overflow-hidden">
+      <Analytics />
       {/* Background Image */}
       <motion.div
         initial={{ scale: 1.1 }}
