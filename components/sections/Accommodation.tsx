@@ -83,7 +83,7 @@ export default function Accommodation() {
             </div>
             <Text
               alignment="left"
-              text="Guests cover the cost of their accommodation for both nights and dinner on Friday evening. All food costs will be covered as part of the wedding celebration on the Saturday."
+              text="Guests cover the cost of their accommodation for both nights and dinner on Friday evening. Breakfast is included in the overnight stay, however we will be upgrading everyone to a mountain brunch on the Sunday. Saturday lunch and dinner are part of the wedding celebrations."
             />
             <Text
               alignment="left"
@@ -119,7 +119,7 @@ export default function Accommodation() {
             </div>
             <Text
               alignment="left"
-              text="The Golmerbahn charges per section (around €13 per section, or €35 for an unlimited day pass). We therefore recommend parking in Latschau, where you only need to take one lift section to reach Haus Matschwitz. If you are travelling by public transport, it may be more practical to get the additional gondola from Vandans as this has better access to public transport."
+              text="The Golmerbahn charges per section (around €13 per section, or €35 for an unlimited day pass - or 88€ for a 3-day pass if you want to stay longer). We recommend parking in Latschau, where you only need to take one lift section to reach Haus Matschwitz. If you are travelling by public transport, it may be more practical to get the additional gondola from Vandans as this has better access to public transport."
             />
             <Text
               alignment="left"

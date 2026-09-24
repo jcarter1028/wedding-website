@@ -65,7 +65,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.6 }}
-            className="text-base sm:text-lg md:text-xl text-white/90 tracking-wide drop-shadow-lg mb-16 sm:mb-20"
+            className="text-base font-bold sm:text-lg md:text-xl text-white/90 tracking-wide drop-shadow-lg mb-16 sm:mb-20"
           >
             {weddingData.weddingLocation.location}
           </motion.p>
@@ -76,8 +76,7 @@ export default function Hero() {
             transition={{ delay: 1.6 }}
             className="text-center text-base sm:text-lg md:text-xl text-white/90 tracking-wide drop-shadow-lg mb-16 sm:mb-20 max-w-lg mx-auto font-semibold"
           >
-            Welcome to our wedding website! We’re so excited to celebrate with
-            you in the Austrian mountains!
+            ""
           </motion.p>
         </motion.div>
 

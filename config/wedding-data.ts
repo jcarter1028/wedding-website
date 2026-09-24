@@ -85,7 +85,7 @@ export const weddingData = {
     {
       question: "What should I pack?",
       answer:
-        "We expect the chalet to provide all bedding, so you’ll just need enough clothes for a couple of nights. The chalet is at around 1,500m altitude, so while July can be very warm during the day, it may be much cooler in the evenings.",
+        "Haus Matschwitz provides all bedding, so you’ll just need clothes and personal essentials. At 1,500m, July can be hot and sunny by day but much cooler — or even cold and wet — in the evenings. Pack for both: summer clothes and sun cream, plus a warm layer, waterproof jacket and comfortable shoes. If you plan to hike, bring suitable hiking gear too. We recommend checking the mountain forecast before you travel.",
     },
     {
       question: "Is there a dress code?",
