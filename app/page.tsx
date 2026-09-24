@@ -4,72 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/sections/Hero";
-import Countdown from "@/components/Countdown";
 import weddingData from "@/config/wedding-data";
-
-// Preview sections data with big immersive images
-const previewSections = [
-  {
-    title: "Our Story",
-    subtitle: "How it all began",
-    description:
-      "From the moment we met to our magical engagement, discover the journey that brought us here.",
-    href: "/story",
-    image:
-      "https://images.unsplash.com/photo-1529634806980-85c3dd6d2627?w=1920&q=80",
-    delay: 0.2,
-  },
-  {
-    title: "Event Details",
-    subtitle: "Ceremony & Reception",
-    description:
-      "Join us for our ceremony, cocktail hour, and reception. Find venue details and what to expect.",
-    href: "/details",
-    image:
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&q=80",
-    delay: 0.3,
-  },
-  {
-    title: "Timeline",
-    subtitle: "Day of Schedule",
-    description:
-      "See the full schedule of events from ceremony to send-off. Plan your day with us.",
-    href: "/timeline",
-    image:
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1920&q=80",
-    delay: 0.4,
-  },
-  {
-    title: "Registry",
-    subtitle: "Gift Registry",
-    description:
-      "Your presence is the greatest gift, but if you wish to honor us with something special.",
-    href: "/registry",
-    image:
-      "https://images.unsplash.com/photo-1513279922550-d8ee8cc18288?w=1920&q=80",
-    delay: 0.5,
-  },
-  {
-    title: "Travel & Stay",
-    subtitle: "Accommodations",
-    description:
-      "Hotels, airports, parking, and shuttle information to help you plan your visit.",
-    href: "/travel",
-    image:
-      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1920&q=80",
-    delay: 0.6,
-  },
-  {
-    title: "Wedding Party",
-    subtitle: "Our Loved Ones",
-    description:
-      "Meet the special people standing by our side on this incredible day.",
-    href: "/party",
-    image:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1920&q=80",
-    delay: 0.7,
-  },
-];
 
 // Large immersive photo section component
 function ImmersivePhotoSection({

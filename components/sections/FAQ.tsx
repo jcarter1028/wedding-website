@@ -5,6 +5,7 @@ import FadeIn from "../FadeIn";
 import weddingData from "@/config/wedding-data";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import BackgroundAnimation from "../BackgroundAnimation";
 
 export default function FAQ() {
   const { faq } = weddingData;
@@ -17,102 +18,7 @@ export default function FAQ() {
   return (
     <section className="pt-24 md:pt-28 pb-20 md:pb-32 px-4 bg-gradient-to-b from-cream-50 to-cream-100 relative overflow-hidden">
       <div className="max-w-4xl mx-auto relative">
-        {/* Subtle Floral - Top Left */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="absolute -top-8 -left-8 md:-left-12 w-32 md:w-44 h-32 md:h-44 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/Floral 1.png"
-            alt=""
-            fill
-            className="object-contain opacity-80"
-            style={{ transform: 'rotate(5deg)' }}
-          />
-        </motion.div>
-
-        {/* Subtle Floral - Top Right */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="absolute -top-8 -right-8 md:-right-12 w-32 md:w-44 h-32 md:h-44 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/Floral 2.png"
-            alt=""
-            fill
-            className="object-contain opacity-80"
-            style={{ transform: 'rotate(-8deg)' }}
-          />
-        </motion.div>
-
-        {/* Subtle Floral - Bottom Left */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="absolute -bottom-8 -left-8 md:-left-12 w-36 md:w-48 h-36 md:h-48 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/floral 3.png"
-            alt=""
-            fill
-            className="object-contain opacity-80"
-            style={{ transform: 'rotate(155deg)' }}
-          />
-        </motion.div>
-
-        {/* Subtle Floral - Bottom Right */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="absolute -bottom-8 -right-8 md:-right-12 w-36 md:w-48 h-36 md:h-48 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/floral 4.png"
-            alt=""
-            fill
-            className="object-contain opacity-80"
-            style={{ transform: 'rotate(-155deg)' }}
-          />
-        </motion.div>
-
-        {/* Extra Floral - Upper Middle Left */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="absolute top-[20%] left-4 md:left-12 w-28 md:w-36 h-28 md:h-36 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/floral 4.png"
-            alt=""
-            fill
-            className="object-contain opacity-68"
-            style={{ transform: 'rotate(40deg)' }}
-          />
-        </motion.div>
-
-        {/* Extra Floral - Lower Middle Right */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1.1 }}
-          className="absolute bottom-[20%] right-4 md:right-12 w-28 md:w-36 h-28 md:h-36 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/floral 3.png"
-            alt=""
-            fill
-            className="object-contain opacity-68"
-            style={{ transform: 'rotate(-45deg)' }}
-          />
-        </motion.div>
-
+        <BackgroundAnimation />
         <FadeIn>
           <h2 className="font-script text-5xl md:text-7xl text-center text-sage-700 mb-4">
             FAQ
@@ -161,7 +67,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-5 text-gray-700 leading-relaxed font-light">
+                      <div className="px-6 pt-3 pb-5 text-gray-700 leading-relaxed font-light">
                         {item.answer}
                       </div>
                     </motion.div>
@@ -175,4 +81,3 @@ export default function FAQ() {
     </section>
   );
 }
-

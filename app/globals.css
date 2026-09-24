@@ -5,7 +5,7 @@
 
 @layer base {
   body {
-    @apply font-heading text-gray-800 antialiased bg-[#FAF8F3];
+    @apply font-heading text-gray-800 antialiased bg-[#F1F5EF];
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -28,16 +28,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F5F3EE;
+  background: #E8EFE4;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B8A99A;
+  background: #A8BDA8;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9A8B7A;
+  background: #7FA47F;
 }
 
 /* Prevent horizontal scroll on animations */

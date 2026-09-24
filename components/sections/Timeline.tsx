@@ -4,6 +4,7 @@ import FadeIn from "../FadeIn";
 import { motion } from "framer-motion";
 import Title from "../Title";
 import Text from "../Text";
+import BackgroundAnimation from "../BackgroundAnimation";
 
 interface WeekendItem {
   title: string;
@@ -29,7 +30,7 @@ const weekend: WeekendDay[] = [
           "In case of emergency or delayed flights, we do have the possibility of getting one or two cars up the private access road — but please do not plan with this option. Aim to be there comfortably before 5!",
       },
       {
-        title: "Dinner & drinks",
+        title: "Welcome drinks & Dinner",
         description:
           "Catch up, and enjoy a simple dinner and drinks at the chalet.",
       },
@@ -39,7 +40,7 @@ const weekend: WeekendDay[] = [
     day: "Saturday",
     items: [
       {
-        title: "The big day",
+        title: "Breakfast",
         description:
           "We are still defining the details for the day and will update this section soon.",
         extra: "The rough plan includes:",
@@ -50,6 +51,10 @@ const weekend: WeekendDay[] = [
           "Celebration dinner at the chalet",
           "Chats, fun and games",
         ],
+      },
+      {
+        title: "Actvity / Hike (optional)",
+        description: "Enjoy",
       },
     ],
   },
@@ -73,16 +78,13 @@ const weekend: WeekendDay[] = [
 export default function Timeline() {
   return (
     <section className="pt-24 md:pt-28 pb-20 md:pb-32 px-4 bg-gradient-to-b from-cream-50 to-cream-100 relative overflow-hidden">
-      <div className="max-w-4xl mx-auto relative">
-        <FadeIn>
+      <div className="max-w-4xl mx-auto relative isolate">
+        <BackgroundAnimation />
+        <FadeIn className="relative z-10">
           <div className="relative z-10">
             <Title title="Our Weekend" />
-
-            <Text
-              text="Here’s roughly what the weekend will look like (we will update this page in due course):"
-              size="lg"
-            />
-
+            <Text text="We really just want to spend time with everyone, and as we love the mountains, we’d love for you all to join us there! It won’t be a traditional wedding celebration, but there will still be plenty of food, drinks, games, good company and unbeatable mountain views." />
+            <Text text="Here’s roughly what the weekend will look like. We are still finalising details, so will udpate the page in due course." />
             <div className="relative mt-14 md:mt-16">
               {/* Timeline line — LEFT */}
               <div className="absolute left-3 md:left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-sage-200 via-sage-300 to-sage-200" />

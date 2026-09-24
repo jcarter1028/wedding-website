@@ -5,139 +5,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Title from "../Title";
 import Text from "../Text";
+import BackgroundAnimation from "../BackgroundAnimation";
 
 export default function Activities() {
   return (
     <section className="pt-24 md:pt-28 pb-20 md:pb-32 px-4 bg-gradient-to-b from-cream-50 to-cream-100 relative overflow-hidden">
-      <div className="max-w-4xl mx-auto relative">
-        {/* Floral - Top Left */}
-        <motion.div
-          initial={{ opacity: 0, x: -30, y: -30 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="absolute -top-12 -left-8 md:-left-16 w-40 md:w-52 h-40 md:h-52 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/Floral 1.png"
-            alt=""
-            fill
-            className="object-contain opacity-80"
-            style={{ transform: "rotate(-20deg)" }}
-          />
-        </motion.div>
-
-        {/* Floral - Top Right */}
-        <motion.div
-          initial={{ opacity: 0, x: 30, y: -30 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="absolute -top-12 -right-8 md:-right-16 w-40 md:w-52 h-40 md:h-52 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/Floral 2.png"
-            alt=""
-            fill
-            className="object-contain opacity-80"
-            style={{ transform: "rotate(25deg)" }}
-          />
-        </motion.div>
-
-        {/* Floral - Middle Left */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="absolute top-1/2 -left-6 md:-left-12 w-36 md:w-48 h-36 md:h-48 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/floral 3.png"
-            alt=""
-            fill
-            className="object-contain opacity-75"
-            style={{ transform: "rotate(30deg)" }}
-          />
-        </motion.div>
-
-        {/* Floral - Middle Right */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="absolute top-1/2 -right-6 md:-right-12 w-36 md:w-48 h-36 md:h-48 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/floral 4.png"
-            alt=""
-            fill
-            className="object-contain opacity-75"
-            style={{ transform: "rotate(-35deg)" }}
-          />
-        </motion.div>
-
-        {/* Floral - Bottom Left */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="absolute -bottom-10 -left-8 md:-left-16 w-44 md:w-56 h-44 md:h-56 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/Floral 2.png"
-            alt=""
-            fill
-            className="object-contain opacity-73"
-            style={{ transform: "rotate(140deg)" }}
-          />
-        </motion.div>
-
-        {/* Floral - Bottom Right */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.3 }}
-          className="absolute -bottom-10 -right-8 md:-right-16 w-44 md:w-56 h-44 md:h-56 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/Floral 1.png"
-            alt=""
-            fill
-            className="object-contain opacity-73"
-            style={{ transform: "rotate(-140deg) scaleX(-1)" }}
-          />
-        </motion.div>
-
-        {/* Extra Floral - Upper Center Left */}
-        <motion.div
-          initial={{ opacity: 0, rotate: -15 }}
-          animate={{ opacity: 1, rotate: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="absolute top-[20%] left-8 md:left-16 w-28 md:w-36 h-28 md:h-36 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/floral 4.png"
-            alt=""
-            fill
-            className="object-contain opacity-70"
-            style={{ transform: "rotate(50deg)" }}
-          />
-        </motion.div>
-
-        {/* Extra Floral - Lower Center Right */}
-        <motion.div
-          initial={{ opacity: 0, rotate: 15 }}
-          animate={{ opacity: 1, rotate: 0 }}
-          transition={{ duration: 1, delay: 1.1 }}
-          className="absolute bottom-[25%] right-8 md:right-16 w-28 md:w-36 h-28 md:h-36 pointer-events-none z-0"
-        >
-          <Image
-            src="/images/floral 3.png"
-            alt=""
-            fill
-            className="object-contain opacity-70"
-            style={{ transform: "rotate(-55deg)" }}
-          />
-        </motion.div>
-        <FadeIn>
+      <div className="max-w-4xl mx-auto relative isolate">
+        <BackgroundAnimation />
+        <FadeIn className="relative z-10">
           <Title title="Things to do in the area" />
           <div className="relative z-10 backdrop-blur-sm">
             <Text bold size="xl" text="What else is there to do" />
@@ -147,7 +22,7 @@ export default function Activities() {
 
             <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center my-10">
               {/* Image */}
-              <div className="w-full lg:w-1/2">
+              <figure className="w-full lg:w-1/2">
                 <Image
                   src="/images/uaineonslide.jpeg"
                   alt="Golm"
@@ -155,7 +30,10 @@ export default function Activities() {
                   height={600}
                   className="w-full rounded-lg object-cover"
                 />
-              </div>
+                <figcaption className="mt-2 text-center text-sm text-gray-600 font-light">
+                  Slides in Golm
+                </figcaption>
+              </figure>
               {/* Text */}
               <div className="w-full lg:w-1/2">
                 <Text
@@ -226,7 +104,7 @@ export default function Activities() {
               </div>
 
               {/* Image */}
-              <div className="w-full lg:w-1/2 order-1 lg:order-2">
+              <figure className="w-full lg:w-1/2 order-1 lg:order-2">
                 <Image
                   src="/images/mountaincart.jpg"
                   alt="Mountain carts"
@@ -234,14 +112,17 @@ export default function Activities() {
                   height={600}
                   className="w-full rounded-lg object-cover"
                 />
-              </div>
+                <figcaption className="mt-2 text-center text-sm text-gray-600 font-light">
+                  Mountain carts in Gargellen
+                </figcaption>
+              </figure>
             </div>
 
             <Text bold size="xl" text="Beyond Montafon" />
 
             <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center my-10">
               {/* Image */}
-              <div className="w-full lg:w-1/2">
+              <figure className="w-full lg:w-1/2">
                 <Image
                   src="/images/Quinten.jpeg"
                   alt="Quiten, Wallensee"
@@ -249,13 +130,16 @@ export default function Activities() {
                   height={600}
                   className="w-full rounded-lg object-cover"
                 />
-              </div>
+                <figcaption className="mt-2 text-center text-sm text-gray-600 font-light">
+                  Wallensee, Switzerland
+                </figcaption>
+              </figure>
 
               {/* Text */}
               <div className="w-full lg:w-1/2">
                 <Text
                   alignment="left"
-                  text="If you’re staying for longer, there’s even more to explore beyond Montafon. Lake Constance, Bregenerwald, Feldkirch, Bludenz, Liechtenstein and Switzerland are all within easy reach. "
+                  text="If you’re staying for longer, there’s even more to explore beyond Montafon. Lake Constance, Bregenzerwald, Feldkirch, Bludenz, Liechtenstein and Switzerland are all within easy reach. "
                 />
               </div>
             </div>
