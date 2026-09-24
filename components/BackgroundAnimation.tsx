@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function BackgroundAnimation() {
   return (
-    <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none">
+    <>
       {/* Floral - Top Left */}
       <motion.div
         initial={{ opacity: 0, x: -30, y: -30 }}
@@ -133,6 +133,6 @@ export default function BackgroundAnimation() {
           style={{ transform: "rotate(-55deg)" }}
         />
       </motion.div>
-    </div>
+    </>
   );
 }

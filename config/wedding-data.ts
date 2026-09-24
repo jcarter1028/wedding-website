@@ -73,6 +73,11 @@ export const weddingData = {
   // ===== FAQ =====
   faq: [
     {
+      question: "How should I book accommodation?",
+      answer:
+        "You will be booking directly with the venue, but we first need to work out room arrangements based on who is coming. We will be in touch with you to work this out once we have RSVPs, and will let you know when and how you can contact the chalet.",
+    },
+    {
       question: "Will there be a ceremony?",
       answer:
         "There won’t be a ceremony. We’ll sign the official paperwork separately beforehand, so this weekend is really about spending time with all of you — especially as we don’t get to see many of you as often as we’d like. Just come and enjoy good food, good company and a few days in the beautiful mountains!",

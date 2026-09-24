@@ -17,9 +17,9 @@ export default function FAQ() {
 
   return (
     <section className="pt-24 md:pt-28 pb-20 md:pb-32 px-4 bg-gradient-to-b from-cream-50 to-cream-100 relative overflow-hidden">
-      <div className="max-w-4xl mx-auto relative isolate">
+      <div className="max-w-4xl mx-auto relative">
         <BackgroundAnimation />
-        <FadeIn className="relative z-10">
+        <FadeIn>
           <h2 className="font-script text-5xl md:text-7xl text-center text-sage-700 mb-4">
             FAQ
           </h2>
@@ -30,7 +30,7 @@ export default function FAQ() {
 
         <div className="space-y-4">
           {faq.map((item, index) => (
-            <FadeIn key={index} delay={index * 0.05} className="relative z-10">
+            <FadeIn key={index} delay={index * 0.05}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
