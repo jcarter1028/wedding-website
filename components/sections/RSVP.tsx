@@ -1,20 +1,22 @@
 import FadeIn from "../FadeIn";
 import Title from "../Title";
 import Text from "../Text";
+import BackgroundAnimation from "../BackgroundAnimation";
 
 const rsvpFormUrl =
   "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAQrM_VtUNUdEWlMwMTY3UThIRzRCWTFROFFTQzI0Uy4u&embed=true";
 
 export default function RSVP() {
   return (
-    <section className="pt-24 md:pt-28 pb-20 px-4 bg-gradient-to-b from-cream-50 to-cream-100">
-      <div className="max-w-3xl mx-auto">
-        <FadeIn>
+    <section className="pt-24 md:pt-28 pb-20 px-4 bg-gradient-to-b from-cream-50 to-cream-100 relative overflow-hidden">
+      <div className="max-w-3xl mx-auto relative isolate">
+        <BackgroundAnimation />
+        <FadeIn className="relative z-10">
           <Title title="RSVP" />
           <Text text="We can't wait to celebrate with you!" />
         </FadeIn>
 
-        <FadeIn delay={0.15}>
+        <FadeIn delay={0.15} className="relative z-10">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <iframe
               title="Wedding RSVP form"

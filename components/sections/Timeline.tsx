@@ -4,6 +4,7 @@ import FadeIn from "../FadeIn";
 import { motion } from "framer-motion";
 import Title from "../Title";
 import Text from "../Text";
+import BackgroundAnimation from "../BackgroundAnimation";
 
 interface WeekendItem {
   title: string;
@@ -73,8 +74,9 @@ const weekend: WeekendDay[] = [
 export default function Timeline() {
   return (
     <section className="pt-24 md:pt-28 pb-20 md:pb-32 px-4 bg-gradient-to-b from-cream-50 to-cream-100 relative overflow-hidden">
-      <div className="max-w-4xl mx-auto relative">
-        <FadeIn>
+      <div className="max-w-4xl mx-auto relative isolate">
+        <BackgroundAnimation />
+        <FadeIn className="relative z-10">
           <div className="relative z-10">
             <Title title="Our Weekend" />
 
