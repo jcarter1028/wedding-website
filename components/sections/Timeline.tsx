@@ -29,7 +29,7 @@ const weekend: WeekendDay[] = [
         ],
       },
       {
-        title: "Welcome drinks & Dinner",
+        title: "Dinner",
         description: [
           "We’ll have dinner together at the restaurant, where everyone can order and pay for their own food and drinks. Afterwards, the bar will be open for us to relax, catch up and enjoy our first evening in the mountains.",
         ],
