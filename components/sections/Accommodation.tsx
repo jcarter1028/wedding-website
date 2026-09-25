@@ -46,7 +46,10 @@ export default function Accommodation() {
                 priority
               />
             </div>
-            <Text alignment="left" text="The accommodation costs are: " />
+            <Text
+              alignment="left"
+              text="The accommodation costs per person are: "
+            />
             <div className="my-6 text-gray-600">
               <ul className="space-y-2">
                 <li className="flex gap-3">
