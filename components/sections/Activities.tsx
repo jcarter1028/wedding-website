@@ -15,11 +15,8 @@ export default function Activities() {
         <FadeIn className="relative z-10">
           <Title title="Things to do in the area" />
           <div className="relative z-10 backdrop-blur-sm">
-            <Text bold size="xl" text="What else is there to do" />
-            <Text text="There’s plenty to do in and around Montafon, so we’d highly recommend spending an extra few days in the area! " />
-            <Text text="Mountain activities include hiking, mountain biking, via ferratas, hut stays and spa hotels." />
+            <Text text="There’s plenty to do in and around Montafon, so we’d highly recommend spending an extra few days in the area! Mountain activities include hiking, mountain biking, via ferratas, hut stays and spa hotels." />
             <Text bold size="xl" text="Staying in Golm" />
-
             <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center my-10">
               {/* Image */}
               <figure className="w-full lg:w-1/2">
