@@ -109,7 +109,7 @@ export default function Accommodation() {
             />
             <div className="w-full max-w-lg mx-auto my-6">
               <Image
-                src="/images/golmerbahnmap.png"
+                src="/images/golmerbahnmap2.png"
                 alt="Map showing the Golmerbahn and Haus Matschwitz"
                 width={800}
                 height={1200}

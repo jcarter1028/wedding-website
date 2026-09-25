@@ -12,7 +12,7 @@ interface TitleProps {
 
 export default function Title({ title }: TitleProps) {
   return (
-    <h2 className="font-script text-5xl md:text-7xl text-center text-sage-700 my-16">
+    <h2 className="font-script text-4xl md:text-7xl text-center text-sage-700 my-16">
       {title}
     </h2>
   );

@@ -6,6 +6,8 @@ import weddingData from "@/config/wedding-data";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import BackgroundAnimation from "../BackgroundAnimation";
+import Title from "../Title";
+import Text from "../Text";
 
 export default function FAQ() {
   const { faq } = weddingData;
@@ -20,12 +22,8 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto relative">
         <BackgroundAnimation />
         <FadeIn>
-          <h2 className="font-script text-5xl md:text-7xl text-center text-sage-700 mb-4">
-            FAQ
-          </h2>
-          <p className="text-center text-gray-600 mb-16 text-lg font-light">
-            Got questions? We've got answers!
-          </p>
+          <Title title="FAQ" />
+          <Text text="Got questions? We've got answers!" />
         </FadeIn>
 
         <div className="space-y-4">
@@ -38,7 +36,7 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggleQuestion(index)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-sage-50/50 transition-colors"
+                  className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-sage-100/50 transition-colors"
                 >
                   <span className="text-lg font-medium text-gray-800 pr-4">
                     {item.question}
