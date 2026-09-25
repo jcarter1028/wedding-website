@@ -109,7 +109,12 @@ export default function Travel() {
               text="SBB tip: Unless you have an annual Swiss Half Fare Travelcard, make sure you untick “half fare” when checking prices or booking via SBB.   "
             />
 
-            <Text bold alignment="center" text="By car" size="xl" />
+            <Text
+              bold
+              alignment="center"
+              text="By car (or motorbike 😉)"
+              size="xl"
+            />
 
             <Text
               alignment="left"
