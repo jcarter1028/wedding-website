@@ -5,7 +5,6 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/sections/Hero";
 import weddingData from "@/config/wedding-data";
-import { Analytics } from "@vercel/analytics/next";
 
 // Large immersive photo section component
 function ImmersivePhotoSection({
@@ -25,7 +24,6 @@ function ImmersivePhotoSection({
 }) {
   return (
     <section className="relative min-h-screen h-screen md:h-screen flex items-center justify-center overflow-hidden">
-      <Analytics />
       {/* Background Image */}
       <motion.div
         initial={{ scale: 1.1 }}
@@ -231,7 +229,7 @@ export default function Home() {
 
         {/* Timeline */}
         <section className="relative py-12 sm:py-16">
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute iFWhat next?nset-0 bg-black/40" />
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -300,6 +298,48 @@ export default function Home() {
             </p>
             <Link
               href="/activities"
+              className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md border-2 border-sage-200/70 text-white rounded-full hover:bg-sage-100 hover:text-sage-800 transition-all duration-300 font-medium text-base sm:text-lg group"
+            >
+              <span className="flex items-center gap-2">
+                Learn More
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </span>
+            </Link>
+          </motion.div>
+        </section>
+
+        {/* Horizontal Divider */}
+        <div className="h-px bg-gradient-to-r from-transparent via-sage-300/40 to-transparent" />
+
+        {/* FAQs */}
+        <section className="relative py-12 sm:py-16">
+          <div className="absolute inset-0 bg-black/40" />
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto"
+          >
+            <h2 className="font-script text-4xl sm:text-5xl md:text-7xl text-white mb-6 sm:mb-8 drop-shadow-2xl">
+              Questions?
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
+              For any other questions such as what you should pack or about the
+              dress code, check out the FAQs page.
+            </p>
+            <Link
+              href="/faq"
               className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md border-2 border-sage-200/70 text-white rounded-full hover:bg-sage-100 hover:text-sage-800 transition-all duration-300 font-medium text-base sm:text-lg group"
             >
               <span className="flex items-center gap-2">
